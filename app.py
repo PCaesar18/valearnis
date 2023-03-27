@@ -1,8 +1,9 @@
-import openai
 
+import openai
 import os
 import json
 from flask import Flask, redirect, render_template, request, url_for, jsonify
+from models.preprocessing import *
 
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -16,6 +17,7 @@ def index():
 @app.route("/chat", methods=("GET", "POST"))
 def chat():
     user_input = request.args.get('user_input') if request.method == 'GET' else request.form['user_input']
+    preprocess(user_input)
     try:
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
