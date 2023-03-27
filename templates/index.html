@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <title>Valearnis Assignment</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/chat.js"></script>
+</head>
+
+
+<body>
+  <div class="chat-container">
+      <h1>Valearnis Chat</h1>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          name="user_input"
+          placeholder="Type your message..."
+        />
+        <button type="submit" id="submitBtn">Send</button>
+      </form>
+      <div id="result"></div>
+    </div>
+</body>
