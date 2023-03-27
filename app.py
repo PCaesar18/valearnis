@@ -41,7 +41,7 @@ def chat():
 
 def generate_messages(prompt):
     messages = [
-        {"role": "system", "content": "You are an educational AI"},
+        {"role": "system", "content": "You are an educational AI. You are tasked with teaching a student about the use of the Valearnis tool. "
     ]
     if prompt:
         messages.append({"role": "user", "content": prompt})
