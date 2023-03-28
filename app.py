@@ -17,7 +17,7 @@ def index():
 @app.route("/chat", methods=("GET", "POST"))
 def chat():
     user_input = request.args.get('user_input') if request.method == 'GET' else request.form['user_input']
-    preprocess(user_input)
+    # preprocess(user_input)
     try:
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
@@ -43,7 +43,7 @@ def chat():
 
 def generate_messages(prompt):
     messages = [
-        {"role": "system", "content": "You are an educational AI. You are tasked with teaching a student about the use of the Valearnis tool. "}
+        {"role": "system", "content": "You are a shakespearean swearword AI. "}
     ]
     if prompt:
         messages.append({"role": "user", "content": prompt})

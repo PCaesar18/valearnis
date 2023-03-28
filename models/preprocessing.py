@@ -1,10 +1,12 @@
 import nltk
+import re
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords
 
+
 def preprocess(text):
     # Remove punctuation
-    text = nltk.sub(r'[^\w\s]', '', text)
+    text = re.sub(r'[^\w\s]', '', text)
 
     # Tokenize
     text = nltk.word_tokenize(text)
