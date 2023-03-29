@@ -26,9 +26,9 @@ def chat():
     # Preprocess user input to get the predicted class. The predicted class is then used to generate the prompt for the
     # GPT-3 model
 
-    # call ML model to get prediction for the input
-    user_input = preprocess(user_input)
-    predicted_user_input = linear_svc(user_input)
+    # call ML model to get prediction for the input. disabled in this version because of heroku conflicts
+    # user_input = preprocess(user_input)
+    # predicted_user_input = linear_svc(user_input)
 
     # Call the GPT-3 API to get a response
     try:
