@@ -1,6 +1,6 @@
 import re
 import nltk
-nltk.download('punkt')
+nltk.download()
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords
 
