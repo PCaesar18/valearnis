@@ -22,3 +22,8 @@ To run:
 
 A deployed version of the project can also be found at:
 https://valearnis.herokuapp.com/
+(to prevent a conflict, the deployed version does not preprocess the user input)
+
+
+
+(to be continued & updated)
