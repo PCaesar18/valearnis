@@ -6,6 +6,7 @@ from flask import Flask, redirect, render_template, request, url_for, jsonify
 from models.preprocessing import *
 
 app = Flask(__name__)
+# api
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
@@ -43,7 +44,7 @@ def chat():
 
 def generate_messages(prompt):
     messages = [
-        {"role": "system", "content": "You are a shakespearean swearword AI. "}
+        {"role": "system", "content": "You are an education AI tool for the company named Valearnis. "}
     ]
     if prompt:
         messages.append({"role": "user", "content": prompt})
@@ -51,4 +52,5 @@ def generate_messages(prompt):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
