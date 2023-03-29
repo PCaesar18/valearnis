@@ -48,3 +48,6 @@ urllib3==1.26.11
 wandb==0.14.0
 Werkzeug==2.0.2
 yarl==1.8.2
+
+sklearn~=0.0.post1
+scikit-learn~=1.2.2
